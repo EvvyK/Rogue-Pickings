@@ -15,6 +15,10 @@ body {
     padding: 20px;
     box-sizing: border-box;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 h2 {
     font-size: 18px;
@@ -24,6 +28,7 @@ h2 {
     text-transform: uppercase;
     line-height: 1.278;
     padding: 15px 0;
+    width: 100%;
   }
 
 p {
@@ -46,25 +51,27 @@ h3 {
 
 .header {
     box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
 }
 
 header h1 {
     text-transform: uppercase;
     font-weight: bold;
-    float: left;
     font-weight: bold;
     font-size: 30px;
     line-height: 23px;
-    padding: 30px 0 20px 5px;
-
+    padding: 30px 0 35px 5px;
+    border-bottom: #77a466 2px solid;
+    width: 100%;
+    text-align: center;
 }
 header .contrast-text {
     color: #77a466
 }
-/**
- Set IDs 8/5
- have Alpha look it over
- be appreciative**/
+
 .navbar {
     font-weight: bold;
     text-transform: uppercase;
@@ -72,12 +79,15 @@ header .contrast-text {
     line-height: 23px;
     list-style: none;
     color: #77a466;
-    float: right;
     padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 nav ul li {
-    display: inline-block;
-    padding: 0 28px;
+    padding: 10px 28px;
+    width: 100%;
+    text-align: center;
 }
 header section {
     clear: both;
@@ -106,22 +116,15 @@ header img {
     padding-bottom: 7px;
 }
 .third-width {
-    width: 33.33%;
-    height: 210px;
-    float: left;
     padding: 30px;
     box-sizing: border-box;
     border-top: 2px solid #dedbdc;
-    border-left: 2px solid #dedbdc;
-    border-bottom: 2px solid #dedbdc;
     margin-top: 15px;
+    width: 100%;
+    padding-left: 0;
 }
 .third-width p {
     line-height: 21px;
-}
-.third-width:first-of-type {
-    border-left: none;
-    padding-left: 0;
 }
 
 /*****************************/
@@ -142,4 +145,42 @@ footer span {
     font-family: 'Galada', cursive;
     color: #77a466;
     text-transform: initial;
+}
+
+@media only screen and (min-width: 768px) {
+    .third-width {
+        width: 33.33%;
+        border-left:#dedbdc 2px solid;
+        border-bottom: #dedbdc 2px solid;
+        padding-left: 30px;
+    }
+
+    .third-width:first-of-type {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .site {
+        align-items: stretch;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .header {
+        justify-content: space-between;
+    }
+    
+    header h1 {
+        border-bottom: none;
+        text-align: left;
+        width: auto;
+    }
+
+    nav ul li {
+        display: inline-block;
+        width: auto;
+        padding: 0 28px;
+    }
+
 }
